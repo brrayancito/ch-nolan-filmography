@@ -1,0 +1,29 @@
+---
+import HeaderButton from './HeaderButton.astro';
+console.log('Header');
+---
+
+<header class="py-8 px-4 mx-auto max-w-xl lg:py-16 lg:px-6">
+  <div class="mx-auto text-center mb-2 lg:mb-16">
+    <h1 class="text-white">
+      Christopher Nolan <span class="text-gradient">Filmography</span>
+    </h1>
+  </div>
+</header>
+
+<style>
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 0.5em;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+</style>

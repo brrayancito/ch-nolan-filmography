@@ -1,0 +1,24 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Layout from '../../layouts/Layout.astro';
+import { getMovieById, getMovies } from '../../services/getMovies';
+
+import { type MoviesProps } from '../../types/api';
+
+const { id } = Astro.params;
+let movie;
+if (id) movie = await getMovieById({ id });
+console.log(movie);
+
+export async function getStaticPaths() {
+  const movies = await getMovies();
+
+  return movies.map((mov: MoviesProps) => ({ params: { id: mov._id } }));
+}
+---
+
+<Layout title={movie?.title}>
+  <article>
+    <img src={movie?.poster} alt="poster imagen" />
+  </article>
+</Layout>

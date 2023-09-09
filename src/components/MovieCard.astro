@@ -1,0 +1,38 @@
+---
+interface Props {
+  _id: string;
+  title: string;
+  director: string;
+  year: number;
+  duration: number;
+  poster: string;
+  genre: string[];
+  rate: number;
+}
+
+const { _id, title, director, year, duration, poster, genre, rate } =
+  Astro.props;
+---
+
+<a
+  href={`/movie/${_id}`}
+  class="rounded-lg border shadow-md bg-gray-800 border-gray-700 hover:scale-105 hover:bg-gray-700
+hover:border-gray-500 transition flex flex-col"
+>
+  <picture class="flex justify-center p-4">
+    <img class="mb-5 rounded-lg" src={poster} alt={`Poster for movie ${_id}`} />
+  </picture>
+
+  <header class="p-4 flex-grow">
+    {
+      genre.map((gen) => (
+        <span class="text-xs font-semibold mr-2 px-2.5 py-0.5 rounded bg-green-400 text-green-900">
+          {gen}
+        </span>
+      ))
+    }
+    <h2 class="my-2 text-2xl font-bold tracking-tight text-white">{title}</h2>
+
+    <p class="mb-4 font-light text-gray-400">{rate}</p>
+  </header>
+</a>
