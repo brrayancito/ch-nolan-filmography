@@ -2,12 +2,26 @@
 
 ---
 
-<a
-  href="/all-movies"
-  class="flex-row justify-center text-white cursor-pointer hover:bg-sky-600 focus:ring-4
-  focus:outline-none focus:ring-[#1da1f2]/50 font-medium rounded-lg px-5 py-2.5 text-center
-  inline-flex items-center dark:focus:ring-[#1da1f2]/55 mr-2 mb-2 hover:shadow-lg transition-all
-  duration-200 ease-in-out hover:scale-110 scale-90 gap-x-2 opacity-90 hover:opacity-100"
+<nav
+  class="flex flex-col items-center justify-around w-full text-center md:flex-row"
 >
-  <slot />
-</a>
+  <a
+    href="/movies"
+    class="flex-row justify-center text-white cursor-pointer hover:bg-slate-700 focus:ring-4
+focus:outline-none focus:ring-[#1da1f2]/50 font-medium rounded-lg px-5 py-2.5 text-center
+inline-flex items-center dark:focus:ring-[#1da1f2]/55 mr-2 mb-2 hover:shadow-lg transition-all
+duration-200 ease-in-out hover:scale-110 scale-90 gap-x-2 opacity-90 hover:opacity-100"
+  >
+    <p class="font text-gray-500 sm:text-xl dark:text-gray-400">All Movies</p>
+  </a>
+
+  <a
+    href="/movies/top-5-movies"
+    class="flex-row justify-center text-white cursor-pointer hover:bg-slate-700 focus:ring-4
+focus:outline-none focus:ring-[#1da1f2]/50 font-medium rounded-lg px-5 py-2.5 text-center
+inline-flex items-center dark:focus:ring-[#1da1f2]/55 mr-2 mb-2 hover:shadow-lg transition-all
+duration-200 ease-in-out hover:scale-110 scale-90 gap-x-2 opacity-90 hover:opacity-100"
+  >
+    <p class="font text-gray-500 sm:text-xl dark:text-gray-400">Top 5 Movies</p>
+  </a>
+</nav>

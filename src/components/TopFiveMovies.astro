@@ -1,13 +1,13 @@
 ---
-import { Director, type MoviesProps } from '../types/api';
+import { type MoviesProps } from '../types/api.ts';
 import MovieCard from './MovieCard.astro';
-import { getMovies } from '../services/getMovies.ts';
-const movies = await getMovies();
+import { getTopFiveMovies } from '../services/getMovies.ts';
+const topFiveMovies = await getTopFiveMovies();
 ---
 
 <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
   {
-    movies.map((movie: MoviesProps) => (
+    topFiveMovies.map((movie: MoviesProps) => (
       <MovieCard
         _id={movie._id}
         title={movie.title}

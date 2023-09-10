@@ -1,0 +1,23 @@
+---
+import { type MoviesProps } from '../types/api.ts';
+import MovieCard from './MovieCard.astro';
+import { getMovies } from '../services/getMovies.ts';
+const movies = await getMovies();
+---
+
+<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+  {
+    movies.map((movie: MoviesProps) => (
+      <MovieCard
+        _id={movie._id}
+        title={movie.title}
+        poster={movie.poster}
+        genre={movie.genre}
+        rate={movie.rate}
+        director={movie.director}
+        duration={movie.duration}
+        year={movie.year}
+      />
+    ))
+  }
+</div>
