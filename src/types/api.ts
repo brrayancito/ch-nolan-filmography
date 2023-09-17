@@ -1,5 +1,6 @@
 export type MoviesProps = {
     _id: string;
+    description: string;
     title: string;
     director: Director;
     year: number;
