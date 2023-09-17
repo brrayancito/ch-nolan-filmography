@@ -1,11 +1,13 @@
 ---
-interface Props {
+export interface Props {
   _id: string;
   title: string;
   director: string;
   year: number;
   duration: number;
   poster: string;
+  trailer: string;
+  imdb: string;
   genre: string[];
   rate: number;
 }
@@ -31,7 +33,9 @@ hover:border-gray-500 transition flex flex-col"
         </span>
       ))
     }
-    <h2 class="my-2 text-2xl font-bold tracking-tight text-white">{title}</h2>
+    <h2 class="my-2 text-2xl font-bold tracking-tight text-white">
+      {title} | {year}
+    </h2>
 
     <p class="mb-4 font-light text-gray-400">{rate}</p>
   </header>

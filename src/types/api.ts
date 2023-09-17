@@ -5,6 +5,8 @@ export type MoviesProps = {
     year: number;
     duration: number;
     poster: string;
+    trailer: string;
+    imdb: string;
     genre: string[];
     rate: number;
 };

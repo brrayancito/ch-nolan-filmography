@@ -9,7 +9,12 @@ import HeaderButton from './HeaderButton.astro';
     </h1>
   </div>
 
-  <HeaderButton />
+  <nav
+    class="flex flex-col items-center justify-around w-full text-center md:flex-row"
+  >
+    <HeaderButton href="/movies">All Movies</HeaderButton>
+    <HeaderButton href="/movies/top-5-movies">Top 5 Movies</HeaderButton>
+  </nav>
 </header>
 
 <style>
