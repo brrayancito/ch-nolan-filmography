@@ -1,3 +1,4 @@
+![project-img](./public/704shots_so.png)
 
 # Christopher Nolan Filmography
 
